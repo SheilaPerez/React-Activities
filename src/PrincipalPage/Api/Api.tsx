@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { copyFile } from "fs";
 interface CharactersInfo {
     gender: string;
     image: string;
@@ -15,30 +14,33 @@ interface Location {
 
 
 const Api = () => {
-    const [characters, setCharacters] = useState<CharactersInfo[] | null>([]);
+    const [characters, setCharacters] = useState<CharactersInfo[]>([]);
     const [foundCharacter, setFoundCharacter] = useState<string>('');
-    const [copyCharacters, setCopyCharacters] = useState<CharactersInfo[] | null>([]);
-
+    const [filteredCharacters, setFilteredCharacters] = useState<CharactersInfo[]>([]);
+    const [searchClicked, setSearchClicked] = useState<Boolean>(false);
     useEffect(() => {
-        axios.get('https://rickandmortyapi.com/api/character', {
-        }).then(function (response) {
+        axios.get('https://rickandmortyapi.com/api/character').then(function (response) {
             setCharacters(response.data.results);
-            setCopyCharacters(response.data.results);
             console.log('data', response.data);
         });
     }, []);
 
     const handleChangeSearh = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.value.length === 0) {
-            setCopyCharacters(characters);
-        }
         setFoundCharacter(e.target.value);
-        if (copyCharacters) {
-            setCopyCharacters(copyCharacters?.filter((character) => {
-                const regexp = new RegExp(`${e.target.value}`);
-                return regexp.test(character.name)
-            }))
-        }
+    }
+
+    const handleClickSearch = (foundCharacter: string) => {
+        setSearchClicked(!searchClicked);
+            const foundCharacters = characters.filter((character) => {
+                return foundCharacter === character.name;
+            })
+            console.log('found', foundCharacters)
+            setFilteredCharacters(foundCharacters!)    
+    }
+
+    const handleClickRestart = () => {
+        setFoundCharacter('');
+        setFilteredCharacters([]);
     }
 
     return characters ? (
@@ -47,24 +49,26 @@ const Api = () => {
             <div>
                 <p style={{color: 'blueviolet'}}>Look for the character and find out their characteristics</p>
                 <input type="text" placeholder='Name' value={foundCharacter} onChange={(e) => handleChangeSearh(e)} style={{ display: 'inline-block' }}></input>
+                <button type="button" onClick={() => handleClickSearch(foundCharacter)}>Search</button>
+                <button type="button" onClick={handleClickRestart}>Restart</button>
             </div>
-            {copyCharacters?.map((character) => {
+            {filteredCharacters?.length === 0 && characters.map((character: CharactersInfo) => {
                 return (
-                    <div>
-                        {character.name === foundCharacter ?
-                        <div style={{border: '1px solid yellow', paddingRight: '20px', paddingLeft: '20px', width: '400px'}}>
+                    <p>{character.name}</p>
+                )
+            })}
+            {filteredCharacters.length > 0 && filteredCharacters?.map((character) => {
+                return (
+                    <div style={{border: '1px solid yellow', paddingRight: '20px', paddingLeft: '20px', width: '400px', marginTop: '20px'}}>
                                 <p style={{fontWeight: 'bold'}}>Name: {foundCharacter}</p>
                                 <img src={character.image}></img>
                                 <p style={{fontWeight: 'bold'}}>Gender: {character.gender}</p>
                                 <p style={{fontWeight: 'bold'}}>Location: {character.location.name}</p>
                                 <p style={{fontWeight: 'bold'}}>Specie: {character.species}</p>
-                                <p>Status: {character.status}</p>
+                                <p style={{fontWeight: 'bold'}}>Status: {character.status}</p>
                         </div>
-                            :
-                        <p>{character.name}</p>}
-                    </div>
-               ) 
-            })} 
+                )
+            })}
         </div>
     ) : null
 }
