@@ -1,0 +1,77 @@
+.content {
+    border: 1px dashed #00ABB3;
+    padding: 30px; 
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Boogaloo', 'cursive'
+}
+
+.formContent {
+    color: white;
+    border: 1px dashed #00aab3b8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.nickName {
+    font-family: 'Boogaloo','cursive'; 
+    font-size: 30px;
+    color: white;
+}
+
+.biography {
+    color: white;
+}
+
+.inputNick {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-bottom: 10px;
+}
+
+.inputNick:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+input::placeholder {
+    color: white;  
+}
+
+.inputBio {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659);
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.inputBio:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+textarea::placeholder {
+    color: white;  
+}
+
+input, select, textarea {
+    color: white;
+    font-size: 15px;
+}
+
+.label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}

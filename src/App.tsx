@@ -5,11 +5,20 @@ import FootballMatch from './PrincipalPage/Reducer/FootballMatch';
 import IteracionObjetos from './PrincipalPage/IteracionObjetos';
 import Buscador from './PrincipalPage/Buscador';
 import CheckList from './PrincipalPage/ChechList';
-import Api from './PrincipalPage/Api';
+import RickAndMorty from './PrincipalPage/RickAndMorty';
+import PrintCard from './PrincipalPage/PrintCard';
+import Marcador from './PrincipalPage/Marcador';
+import TicTacToe from './PrincipalPage/TicTacToe';
+import Pokemon from './PrincipalPage/Pokemon';
+
 function App() {
   return (
     <div className="App">
-      <Api></Api>
+      <Pokemon></Pokemon>
+      <TicTacToe></TicTacToe>
+      <Marcador></Marcador>
+      <PrintCard></PrintCard>
+      <RickAndMorty></RickAndMorty>
       <CheckList></CheckList>
       <Buscador></Buscador>
       <ToDoList></ToDoList>

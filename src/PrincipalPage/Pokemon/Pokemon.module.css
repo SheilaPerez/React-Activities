@@ -1,0 +1,14 @@
+.content {
+    border: 1px dashed #FFCD38; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}

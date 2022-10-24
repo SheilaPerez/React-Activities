@@ -1,0 +1,98 @@
+.content {
+    border: 1px dashed #E80F88;; 
+    padding: 20px 20px 20px 60px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.newPlayer {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+.newPlayer:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+input::placeholder {
+    color: white;  
+}
+
+.addButton {
+    background-color: #E80F88;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #F675A8;
+}
+
+.removePlayer {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+.removePlayer:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+.removeButton {
+    background-color: #F675A8;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.removeButton:hover {
+    background-color: #E80F88;
+}
+
+.removeContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.cardPlayer {
+    border-top: 30px solid #F675A8;
+    border-left: 1px solid #E80F88;
+    border-right: 1px solid #E80F88;
+    border-bottom: 1px solid #E80F88;
+    display: inline-block;    padding: 10px 20px;
+    width: 100px;
+    margin: 20px 52px 30px 0;
+}
+
+.explication {
+    font-family: 'Noto Serif Telugu', serif;
+}

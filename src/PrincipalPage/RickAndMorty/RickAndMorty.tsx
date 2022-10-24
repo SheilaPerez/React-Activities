@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import styles from './RickAndMorty.module.css';
 interface CharactersInfo {
     gender: string;
     image: string;
@@ -13,7 +14,7 @@ interface Location {
 }
 
 
-const Api = () => {
+const RickAndMorty = () => {
     const [characters, setCharacters] = useState<CharactersInfo[]>([]);
     const [foundCharacter, setFoundCharacter] = useState<string>('');
     const [filteredCharacters, setFilteredCharacters] = useState<CharactersInfo[]>([]);
@@ -21,7 +22,6 @@ const Api = () => {
     useEffect(() => {
         axios.get('https://rickandmortyapi.com/api/character').then(function (response) {
             setCharacters(response.data.results);
-            console.log('data', response.data);
         });
     }, []);
 
@@ -34,7 +34,6 @@ const Api = () => {
             const foundCharacters = characters.filter((character) => {
                 return foundCharacter === character.name;
             })
-            console.log('found', foundCharacters)
             setFilteredCharacters(foundCharacters!)    
     }
 
@@ -44,14 +43,17 @@ const Api = () => {
     }
 
     return characters ? (
-        <div style={{ border: '1px solid #9E7676', padding: '30px', marginBottom: '20px' }}>
-            <p style={{ fontWeight: 'bold' }}>---- Api Rick and Morty ----</p>
+        <div className={styles.content}>
+            <p className={styles.title}>---- Api Rick and Morty ----</p>
             <div>
-                <p style={{color: 'blueviolet'}}>Look for the character and find out their characteristics</p>
-                <input type="text" placeholder='Name' value={foundCharacter} onChange={(e) => handleChangeSearh(e)} style={{ display: 'inline-block' }}></input>
-                <button type="button" onClick={() => handleClickSearch(foundCharacter)}>Search</button>
-                <button type="button" onClick={handleClickRestart}>Restart</button>
+                <p className={styles.subtitle}>Looking for the character and find out their characteristics</p>
+                <div className={styles.inputContent}>
+                    <input type="text" placeholder='Name' value={foundCharacter} onChange={(e) => handleChangeSearh(e)} className={styles.inputName}></input>
+                    <button type="button" className={styles.search} onClick={() => handleClickSearch(foundCharacter)}>Search</button>
+                    <button type="button" className={styles.restart} onClick={handleClickRestart}>Restart</button>
+                </div>
             </div>
+            <p>Characters list:</p>
             {filteredCharacters?.length === 0 && characters.map((character: CharactersInfo) => {
                 return (
                     <p>{character.name}</p>
@@ -73,4 +75,4 @@ const Api = () => {
     ) : null
 }
 
-export default Api;
+export default RickAndMorty;

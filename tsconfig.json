@@ -101,6 +101,6 @@
       "skipLibCheck": true,  
       "lib": [
         "es5", "es6", "dom", "dom.iterable"
-      ]                               /* Skip type checking all .d.ts files. */
+      ]     
     }
   }

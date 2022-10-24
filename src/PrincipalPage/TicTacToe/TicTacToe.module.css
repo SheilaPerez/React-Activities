@@ -1,0 +1,29 @@
+.content {
+    border: 1px dashed #B1AFFF; 
+    padding: 30px; 
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.boxes {
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+.boxContent {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(94, 91, 91, 0.659);
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}

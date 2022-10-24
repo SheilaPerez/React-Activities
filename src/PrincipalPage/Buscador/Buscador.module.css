@@ -1,0 +1,63 @@
+.content {
+    border: 1px dashed rgb(231, 56, 56); 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.font {
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+.inputSearch {
+    padding: 6px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin: 0 10px 10px 10px;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 10px;
+}
+
+.inputSearch:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+input::placeholder {
+    color: white;  
+}
+
+.search {
+    background-color: rgb(231, 56, 56);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reset {
+    background-color: rgb(177, 49, 49);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(177, 49, 49);
+}

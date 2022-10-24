@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuid } from 'uuid';
+import styles from './ToDoList.module.css';
+
 interface ToDoTask {
     name: string;
     id: string;
@@ -54,25 +56,27 @@ const ToDoList = () => {
     }
 
     return (
-        <div style={{ border: '1px solid green', padding: '30px', marginBottom: '20px' }}>
-            <p style={{ fontWeight: 'bold' }}>---- To do list ----</p>
-            <div>
-                <input type="text" placeholder="Add your task" value={task} onChange={(e) => handleChangeAddTask(e)}></input>
-                <button type="button" onClick={() => handleClickAddTask(task)}>Add</button>
+        <div className={styles.content}>
+            <p className={styles.title}>---- To do list ----</p>
+            <div className={styles.taskNameContent}>
+                <input type="text" placeholder="Add your task" className={styles.input} value={task} onChange={(e) => handleChangeAddTask(e)}></input>
+                <button type="button" className={styles.addButton}onClick={() => handleClickAddTask(task)}>Add</button>
             </div> 
             {tasksList.map((task: ToDoTask) => {
                 return (
                     <div>
                         {clickedEditTask && task.id === taskId ?
                             <div>
-                                <input type="text" value={taskEdited} onChange={(e) => handleChangeEditTask(e)}></input>
-                                <button type="button" onClick={() => handleClickSaveEditTask(taskEdited, task)}>Save</button>
+                                <input type="text" value={taskEdited} className={styles.input} onChange={(e) => handleChangeEditTask(e)}></input>
+                                <button type="button" className={styles.save} onClick={() => handleClickSaveEditTask(taskEdited, task)}>Save</button>
                             </div>
                             :
-                            <div>
+                            <div className={styles.taskName}>
                                 <p>{task.name}</p>
-                                <button type="button" onClick={() => handleClickRemoveTask(task.id)}>Remove</button>
-                                <button type="button" onClick={() => handleClickEditedBtn(task.id)}>Edited</button>
+                                <div>
+                                    <button type="button" className={styles.remove} onClick={() => handleClickRemoveTask(task.id)}>X</button>
+                                    <button type="button" className={styles.edited} onClick={() => handleClickEditedBtn(task.id)}>Edited</button>
+                                </div>
                             </div>
                         }
                     </div>

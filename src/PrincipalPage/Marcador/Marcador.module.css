@@ -1,0 +1,55 @@
+.content {
+    border: 1px dashed #35ac80;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Boogaloo', 'cursive';
+}
+
+.numContent {
+    background-color: rgba(94, 91, 91, 0.659);
+    width: 259px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.numBtn {
+    cursor: pointer;
+    font-size: 80px;
+    color: rgb(237, 230, 230);
+    padding-top: 23px;
+    padding-right: 42px;
+    font-family: 'Noto Serif Telugu', serif;
+    user-select: none; 
+}
+
+.numBtn:hover {
+    color: rgb(246, 126, 146);
+}
+
+.numBtnAnimation {
+    animation-name: numClicked;
+    animation-duration: 1s;
+}
+
+@keyframes numClicked {
+   0% {
+    transform: scale(1.6);
+    color: rgb(246, 126, 146);
+   } 
+   100% {
+    transform: scale(1);
+    color: white;
+   }
+}
+
+

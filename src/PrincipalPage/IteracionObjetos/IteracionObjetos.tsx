@@ -1,33 +1,51 @@
+import styles from './IteracionObjetos.module.css';
 
 interface animal {
-    name: string;
+    animal: string;
     legs: number;
     female: boolean
     age: number
 }
 const IteracionObjetos = () => {
     const animals: animal[] = [{
-        name: 'cat',
+        animal: 'cat',
         legs: 4,
         female: false,
         age: 3
     }, {
-        name: 'dog',
+        animal: 'dog',
         legs: 4,
         female: true,
         age: 7
     }];
     return (
-        <div style={{ border: '1px solid purple', padding: '30px', marginBottom: '20px' }}>
-            <p style={{ fontWeight: 'bold' }}>---- Iteración con objetos ----</p>
-            {animals.map((animal) => {
-                return Object.entries(animal).map(([keys, value]) => {
-                    return (
-                        <p>{keys}:{value}</p>
-                    );
-                });
-            })}
+        <div className={styles.content}>
+            <p className={styles.title}>---- Iteración con objetos ----</p>
+            <div className={styles.contentPage}>
+                <div>
+                    <p className={styles.objExemple}>Object exemple:</p>
+                    <p>const animals = [</p>
+                    <p>animal: 'cat',</p>
+                    <p>legs: 4,</p>
+                    <p>female: false,</p>
+                    <p>age: 3</p>
+                    <p>animal: 'dog',</p>
+                    <p>legs: 4,</p>
+                    <p>female: true,</p>
+                    <p>age: 7</p>
+                    <p>]</p>
 
+                </div>
+                <div className={styles.animalCard}>
+                    {animals.map((animal) => {
+                        return Object.entries(animal).map(([keys, value]) => {
+                            return (
+                                <p>{keys} --- {value}</p>
+                            );
+                        });
+                    })}
+                </div>
+            </div>
         </div>
     );
 }

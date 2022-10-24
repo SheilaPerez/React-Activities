@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuid } from 'uuid';
+import styles from './CheckList.module.css';
 
 interface Task {
     name: string,
@@ -38,18 +39,18 @@ const CheckList = () => {
     }
 
     return (
-        <div style={{ border: '1px solid #B1AFFF', padding: '30px', marginBottom: '20px' }}>
-            <p style={{ fontWeight: 'bold' }}>---- Check List ----</p>
-            <div>
-                <input type="text" placeholder="Write your task" value={task} onChange={(e) => handleChangeAdd(e)}></input>
-                <button type="button" onClick={handleClickAdd}>Add</button>
+        <div className={styles.content}>
+            <p className={styles.title}>---- Check List ----</p>
+            <div className={styles.addContent}>
+                <input type="text" placeholder="Write your task" className={styles.inputTask} value={task} onChange={(e) => handleChangeAdd(e)}></input>
+                <button type="button" className={styles.addBtn} onClick={handleClickAdd}>Add</button>
             </div>
             {tasks.map((taskItem) => {
-                return (<div>
-                            <input type="checkbox" value={taskItem.id} onChange={(e) => handleChangeCheckbox(e, taskItem.id)} style={{display: 'inline-block', marginRight: '10px' }}></input>
-                            <p style={{ display: 'inline-block', marginRight: '20px' }}>{taskItem.name}</p>
-                            <button type="button" onClick={() => handleClickDelteTask(taskItem.id)} style={{display: 'inline-block', marginRight: '20px'}}>Delete</button>
-                            {taskItem.check && <p style={{display: 'inline-block', color: 'green'}}>Done</p>}
+                return (<div className={styles.taskContent}>
+                            <input type="checkbox" value={taskItem.id} onChange={(e) => handleChangeCheckbox(e, taskItem.id)}></input>
+                            <p className={styles.taskItem}>{taskItem.name}</p>
+                            <button type="button" onClick={() => handleClickDelteTask(taskItem.id)} className={styles.delete}>X</button>
+                            {taskItem.check && <p className={styles.done}>Done</p>}
                         </div>)      
                     })}
                                         

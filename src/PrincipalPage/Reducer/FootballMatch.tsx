@@ -1,5 +1,7 @@
 import { Reducer, useReducer, useState } from "react";
 import { reducer } from "./Reducer";
+import styles from './FootballMatch.module.css';
+
 export interface match {
     players: {
         name: string,
@@ -52,23 +54,26 @@ const FootballMatch = () => {
         dispatch({ type: 'removeplayer', payload: namePlayerRemove });
     }
     return (
-        <div style={{ border: '1px solid black', padding: '30px' }}>
-            <p style={{ fontWeight: 'bold' }}>---- useReducer ----</p>
+        <div className={styles.content}>
+            <p className={styles.title}>---- useReducer ----</p>
+            <p className={styles.explication}>Add new player: </p>
+            <input type="text" placeholder="Add player name" className={styles.newPlayer} onChange={(e) => handleChangeAddPlayerName(e)}></input>
+            <input type="number" placeholder="Add player age" className={styles.newPlayer} onChange={(e) => handleChangeAddPlayerAge(e)}></input>
+            <button type="button" onClick={handleClickAddNewPlayer} className={styles.addButton}>Add</button>
+            <p className={styles.explication}>Remove player:</p>
+            <div className={styles.removeContent}>
+                <input type="text" placeholder="Write a player name" className={styles.removePlayer} onChange={(e) => handleChangeRemovePlayer(e)}></input>
+                <button type="button" onClick={handleClickRemovePlayerByName} className={styles.removeButton}>Remove</button>
+            </div>
             {state.players.map((player) => {
                 return (
-                    <div>
-                        <p>{player.name}</p>
-                        <p>{player.age}</p>
+                    <div className={styles.cardPlayer}>
+                        <p>Name: {player.name}</p>
+                        <p>Age: {player.age}</p>
                     </div>
                 )
             })}
-            <p>Add new player: </p>
-            <input type="text" placeholder="Add player name" onChange={(e) => handleChangeAddPlayerName(e)}></input>
-            <input type="number" placeholder="Add player age" onChange={(e) => handleChangeAddPlayerAge(e)}></input>
-            <button type="button" onClick={handleClickAddNewPlayer}>Add</button>
-            <p>Remove player:</p>
-            <input type="text" placeholder="Write a player name" onChange={(e) => handleChangeRemovePlayer(e)}></input>
-            <button type="button" onClick={handleClickRemovePlayerByName}>Remove</button>
+            
         </div>
     )
 }
