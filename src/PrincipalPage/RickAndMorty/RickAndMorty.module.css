@@ -66,5 +66,33 @@
 }
 
 .restart:hover {
-    background-color: #FFCD38;
+    background-color: #816c2d;
+    color: #FFCD38;
+}
+
+.characterContent {
+    border: 3px dotted #FFCD38;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.image {
+    width: 200px;
+    border-radius: 40px;
+    border: 3px solid white;
+}
+
+.valueName {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+.value {
+    display: inline-block;
 }

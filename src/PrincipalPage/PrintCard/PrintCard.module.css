@@ -1,9 +1,9 @@
 .content {
     border: 1px dashed #00ABB3;
-    padding: 30px; 
+    padding: 20px 60px 20px 60px;
     margin-bottom: 20px;
     border-radius: 20px;
-    width: 470px;
+    width: 431px;
 }
 
 .title {
@@ -26,17 +26,27 @@
     font-family: 'Boogaloo','cursive'; 
     font-size: 30px;
     color: white;
+    margin-top: 0;
 }
 
 .biography {
     color: white;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+.userCardContent {
+    background-color: rgba(59, 57, 57, 0.952);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
 }
 
 .inputNick {
     padding: 6px;
     width: 170px;
     border-radius: 10px;
-    background-color: rgba(94, 91, 91, 0.659); 
+    border: none;
+    background-color: rgba(59, 57, 57, 0.952); 
     margin-bottom: 10px;
 }
 
@@ -52,7 +62,8 @@ input::placeholder {
 .inputBio {
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(94, 91, 91, 0.659);
+    border: none;
+    background-color: rgba(59, 57, 57, 0.952);
     width: 95%;
     margin-bottom: 10px;
 }
@@ -74,4 +85,48 @@ input, select, textarea {
 .label {
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+.submit {
+    background-color: #09c0ca;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reset {
+    background-color: #00aab3b8;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: #096469 ;
+    color: #09c0ca
+}
+
+.buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 90px;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.avatarImg {
+    width: 90px;
+    border-radius: 50px;
 }

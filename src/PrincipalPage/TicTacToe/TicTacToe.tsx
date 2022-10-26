@@ -101,7 +101,6 @@ const TicTacToe = () => {
                                     return randomNum === num && <TbLetterO size={40}/>;
                                 }) 
                             }
-                            {}
                         </div>
                     )
                 })}

@@ -12,16 +12,22 @@ interface CharactersInfo {
 interface Location {
     name: string;
 }
-
+interface Pages {
+    next: string;
+    prev: string;
+}
 
 const RickAndMorty = () => {
     const [characters, setCharacters] = useState<CharactersInfo[]>([]);
     const [foundCharacter, setFoundCharacter] = useState<string>('');
     const [filteredCharacters, setFilteredCharacters] = useState<CharactersInfo[]>([]);
     const [searchClicked, setSearchClicked] = useState<Boolean>(false);
+    const [pages, setPages] = useState<Pages>({next:'', prev: ''});
+
     useEffect(() => {
-        axios.get('https://rickandmortyapi.com/api/character').then(function (response) {
+        axios.get('https://rickandmortyapi.com/api/character').then((response) => {
             setCharacters(response.data.results);
+            setPages(response.data.info);
         });
     }, []);
 
@@ -42,6 +48,20 @@ const RickAndMorty = () => {
         setFilteredCharacters([]);
     }
 
+    const handleClickNextPage = () => {
+        axios.get(pages.next).then((response) => {
+            setCharacters(response.data.results);
+            setPages(response.data.info);
+        });
+    }
+
+    const handleClickPreviusPage = () => {
+        axios.get(pages.prev).then((response) => {
+            setCharacters(response.data.results);
+            setPages(response.data.info);
+        });
+    }
+
     return characters ? (
         <div className={styles.content}>
             <p className={styles.title}>---- Api Rick and Morty ----</p>
@@ -53,21 +73,31 @@ const RickAndMorty = () => {
                     <button type="button" className={styles.restart} onClick={handleClickRestart}>Restart</button>
                 </div>
             </div>
-            <p>Characters list:</p>
             {filteredCharacters?.length === 0 && characters.map((character: CharactersInfo) => {
                 return (
                     <p>{character.name}</p>
                 )
             })}
+            <div>
+                <button type="button" onClick={handleClickPreviusPage}>Previus</button>
+                <button type="button" onClick={handleClickNextPage}>Next</button>
+            </div>
             {filteredCharacters.length > 0 && filteredCharacters?.map((character) => {
                 return (
-                    <div style={{border: '1px solid yellow', paddingRight: '20px', paddingLeft: '20px', width: '400px', marginTop: '20px'}}>
-                                <p style={{fontWeight: 'bold'}}>Name: {foundCharacter}</p>
-                                <img src={character.image}></img>
-                                <p style={{fontWeight: 'bold'}}>Gender: {character.gender}</p>
-                                <p style={{fontWeight: 'bold'}}>Location: {character.location.name}</p>
-                                <p style={{fontWeight: 'bold'}}>Specie: {character.species}</p>
-                                <p style={{fontWeight: 'bold'}}>Status: {character.status}</p>
+                    <div className={styles.characterContent}>
+                        <img src={character.image} className={styles.image}></img>
+                        <div>
+                            <p className={styles.valueName}>Gender:</p><p className={styles.value}>{character.gender}</p>
+                        </div>
+                        <div>
+                            <p className={styles.valueName}>Location:</p><p className={styles.value}>{character.location.name}</p>
+                        </div>
+                        <div>
+                            <p className={styles.valueName}>Specie: </p><p className={styles.value}>{character.species}</p>
+                        </div>
+                        <div>
+                            <p className={styles.valueName}>Status: </p><p className={styles.value}>{character.status}</p>
+                        </div>
                         </div>
                 )
             })}

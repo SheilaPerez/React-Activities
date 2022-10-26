@@ -10,10 +10,12 @@ import PrintCard from './PrincipalPage/PrintCard';
 import Marcador from './PrincipalPage/Marcador';
 import TicTacToe from './PrincipalPage/TicTacToe';
 import Pokemon from './PrincipalPage/Pokemon';
+import AdivinarNum from './PrincipalPage/AdivinarNum';
 
 function App() {
   return (
     <div className="App">
+      <AdivinarNum></AdivinarNum>
       <Pokemon></Pokemon>
       <TicTacToe></TicTacToe>
       <Marcador></Marcador>

@@ -12,3 +12,13 @@
     font-family: 'Boogaloo', 'cursive';
     font-size: 30px;
 }
+
+.inputName {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: 'Noto Serif Telugu', serif;
+}

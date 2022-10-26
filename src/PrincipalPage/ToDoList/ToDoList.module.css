@@ -21,6 +21,7 @@
     margin-right: 10px;
     font-family: 'Noto Serif Telugu', serif;
     font-size: 12px;
+    border: none;
 }
 
 .input:focus {
