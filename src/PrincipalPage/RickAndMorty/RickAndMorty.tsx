@@ -78,29 +78,33 @@ const RickAndMorty = () => {
                     <p>{character.name}</p>
                 )
             })}
-            <div>
-                <button type="button" onClick={handleClickPreviusPage}>Previus</button>
-                <button type="button" onClick={handleClickNextPage}>Next</button>
-            </div>
-            {filteredCharacters.length > 0 && filteredCharacters?.map((character) => {
+            {filteredCharacters.length > 0 ? filteredCharacters?.map((character) => {
                 return (
                     <div className={styles.characterContent}>
                         <img src={character.image} className={styles.image}></img>
                         <div>
-                            <p className={styles.valueName}>Gender:</p><p className={styles.value}>{character.gender}</p>
+                            <div>
+                                <p className={styles.valueName}>Gender:</p><p className={styles.value}>{character.gender}</p>
+                            </div>
+                            <div>
+                                <p className={styles.valueName}>Location:</p><p className={styles.value}>{character.location.name}</p>
+                            </div>
+                            <div>
+                                <p className={styles.valueName}>Specie: </p><p className={styles.value}>{character.species}</p>
+                            </div>
+                            <div>
+                                <p className={styles.valueName}>Status: </p><p className={styles.value}>{character.status}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p className={styles.valueName}>Location:</p><p className={styles.value}>{character.location.name}</p>
-                        </div>
-                        <div>
-                            <p className={styles.valueName}>Specie: </p><p className={styles.value}>{character.species}</p>
-                        </div>
-                        <div>
-                            <p className={styles.valueName}>Status: </p><p className={styles.value}>{character.status}</p>
-                        </div>
-                        </div>
+                    </div>
                 )
-            })}
+            }) : 
+            <div>
+                <button type="button" onClick={handleClickPreviusPage} className={styles.previus}>Previus</button>
+                <button type="button" onClick={handleClickNextPage} className={styles.next}>Next</button>
+            </div>
+            }
+            
         </div>
     ) : null
 }

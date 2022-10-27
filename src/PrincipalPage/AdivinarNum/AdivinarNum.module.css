@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed #4fff38; 
+    border: 1px dashed #9E7676; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -44,4 +44,53 @@ input::placeholder {
     width: 150px;
     height: 150px;
     border-radius: 10px;
+    margin-top: 10px;
+}
+
+.play {
+    background-color: #9E7676;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.play:hover {
+    background-color: #d79797;
+}
+
+.playAgain {
+    background-color: #9E7676;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+}
+
+.playAgain:hover {
+    background-color: white;
+    color: #9E7676;
+}
+
+.name {
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+    margin: 0;
+}
+
+.info {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 13px;
+}
+
+.lose {
+    color: #B73E3E;
+    font-weight: bold;
 }

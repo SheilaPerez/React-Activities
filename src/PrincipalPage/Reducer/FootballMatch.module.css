@@ -21,6 +21,7 @@
     margin-right: 10px;
     font-size: 12px;
     font-family: 'Noto Serif Telugu', serif;
+    border: none;
 }
 
 .newPlayer:focus {
@@ -54,6 +55,7 @@ input::placeholder {
     margin-right: 10px;
     font-size: 12px;
     font-family: 'Noto Serif Telugu', serif;
+    border: none;
 }
 
 .removePlayer:focus {

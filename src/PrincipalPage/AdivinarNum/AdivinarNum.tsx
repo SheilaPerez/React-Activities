@@ -56,29 +56,29 @@ const AdivinarNum = () => {
     return (
         <div className={styles.content}>
             <p className={styles.title}>---- Guess the number ----</p>
-            <input type="text" placeholder='Pick a number!' value={userNumber} onChange={handleChangeUserNumber} className={styles.inputNumber}></input>
-            <button type="button" onClick={handleClickPlay}>Play!</button>
-            <button type="button" onClick={handleClickPlayAgain}>Play again</button> 
+            <input type="text" placeholder='Pick a number! (0 to 20)' value={userNumber} onChange={handleChangeUserNumber} className={styles.inputNumber}></input>
+            <button type="button" onClick={handleClickPlay} className={styles.play}>Play!</button>
+            <button type="button" onClick={handleClickPlayAgain} className={styles.playAgain}>Play again</button> 
             <div>
-                <p>Which Rick and Morty Character?</p>
-                {tries <= 0 ? <p>You loose...</p> : <p>You have {tries} tries</p>}
+                <p className={styles.info}>Which Rick and Morty Character?</p>
+                {tries <= 0 ? <p className={styles.lose}>Oooh... Try again</p> : <p className={styles.info}>You have {tries} tries</p>}
             </div>
             <div>
                 {playClicked && parseInt(userNumber) === randomNum ?
                     <div>
-                        <p>{character.name}</p>
+                        <p className={styles.name}>{character.name}</p>
                         <img src={character?.image} className={styles.image}></img>
                     </div>
                     :
                     <div>
-                        <p>???</p>   
+                        <p className={styles.name}>???</p>   
                         <div className={styles.notImageContent}>
                             <BsFillPersonFill size={90}/>
                         </div>                  
                     </div>
                 }
-                {playClicked && parseInt(userNumber) > randomNum && <p>Less</p>}
-                {playClicked && parseInt(userNumber) < randomNum && <p>Higher</p>}
+                {playClicked && parseInt(userNumber) > randomNum && <p className={styles.info}>Less</p>}
+                {playClicked && parseInt(userNumber) < randomNum && <p className={styles.info}>Higher</p>}
             </div>
         </div>
     )

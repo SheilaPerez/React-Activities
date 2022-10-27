@@ -20,15 +20,18 @@ const Marcador = () => {
     return (
         <div className={styles.content}>
             <p className={styles.title}>---- Click! ----</p>
-            <div className={styles.numContent}>
-                {number < 9 ? <div onClick={handleClickNumBtn} className={`${numClicked ? `${styles.numBtn} ${styles.numBtnAnimation}` : styles.numBtn}`}>{number}</div>
-                    : number === 9 && <div className={`${numClicked ? `${styles.numBtn} ${styles.numBtnAnimationNine}`: styles.numBtn}`}>9</div>};
-                <div>
-                    <button onClick={handleClickRefresh}>Refresh</button>
-                    <button onClick={handleClickNumBtn}>+</button>
+            <div className={styles.marcContent}>
+                <div className={styles.numContent}>
+                    {number < 9 ? <div onClick={handleClickNumBtn} className={`${numClicked ? `${styles.numBtn} ${styles.numBtnAnimation}` : styles.numBtn}`}>{number}</div>
+                        : <div className={`${numClicked ? `${styles.numBtn} ${styles.numBtnAnimationNine}`: styles.numBtn}`}>9</div>}
+                    <div>
+                        <button onClick={handleClickNumBtn} className={styles.plus}>+</button>
+                        <button onClick={handleClickRefresh} className={styles.refresh}>Refresh</button>
+                    </div>
                 </div>
+                <Heart></Heart>
             </div>
-            <Heart></Heart>
+            
         </div>
     )
 }

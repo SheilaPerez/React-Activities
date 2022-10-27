@@ -40,3 +40,14 @@
         transform: scale(1);
     }
 }
+
+.heartBtn {
+    background-color: rgb(246, 126, 146);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}

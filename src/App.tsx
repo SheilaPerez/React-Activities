@@ -11,10 +11,11 @@ import Marcador from './PrincipalPage/Marcador';
 import TicTacToe from './PrincipalPage/TicTacToe';
 import Pokemon from './PrincipalPage/Pokemon';
 import AdivinarNum from './PrincipalPage/AdivinarNum';
-
+import { FcHighPriority } from "react-icons/fc";
 function App() {
   return (
     <div className="App">
+      <h2>---- Still in progress <FcHighPriority size={20} /> ----</h2>
       <AdivinarNum></AdivinarNum>
       <Pokemon></Pokemon>
       <TicTacToe></TicTacToe>

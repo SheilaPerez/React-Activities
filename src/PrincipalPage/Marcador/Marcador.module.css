@@ -1,9 +1,9 @@
 .content {
-    border: 1px dashed #35ac80;
-    padding: 30px;
+    border: 1px dashed #ff9393;
+    padding: 20px 60px 20px 60px;
     margin-bottom: 20px;
     border-radius: 20px;
-    width: 470px;
+    width: 431px;
 }
 
 .title {
@@ -15,11 +15,11 @@
 
 .numContent {
     background-color: rgba(94, 91, 91, 0.659);
-    width: 259px;
+    width: 223px;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .numBtn {
@@ -27,18 +27,18 @@
     font-size: 80px;
     color: rgb(237, 230, 230);
     padding-top: 23px;
-    padding-right: 42px;
+    padding-right: 20px;
     font-family: 'Noto Serif Telugu', serif;
     user-select: none; 
 }
 
 .numBtn:hover {
-    color: rgb(246, 126, 146);
+    color: #ff9393;
 }
 
 .numBtnAnimation {
     animation-name: numClicked;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
 }
 
 @keyframes numClicked {
@@ -52,4 +52,30 @@
    }
 }
 
+.refresh {
+    background-color: rgb(246, 126, 146);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
+.plus {
+    background-color: rgb(246, 126, 146);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.marcContent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}

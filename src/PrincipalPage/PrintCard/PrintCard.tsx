@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './PrintCard.module.css';
+import { BsFillPersonFill } from "react-icons/bs";
 
 const PrintCard = () => { 
     interface Avatar {
@@ -28,7 +29,7 @@ const PrintCard = () => {
     const [formState, setFormState] = useState({ nickName: '', biography: '' });
     const [formSubmit, setFormSubmit] = useState({ nickName: '', biography: '' });
     const [submitClicked, setSubmitClicked] = useState<Boolean>(false);
-    const [avatarSelected, setAvatarSelected] = useState<Avatar>();
+    const [avatarSelected, setAvatarSelected] = useState<Avatar>({name: '', id: 0});
 
     const handleChangeNickName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormState({...formState, nickName: e.target.value});
@@ -42,7 +43,7 @@ const PrintCard = () => {
     }
 
     const handleClickReset = () => {
-        setFormState({nickName: '', biography: ''});
+        setFormState({ nickName: '', biography: '' });
     }
 
     const handleClickAvatar = (avatar: Avatar) => {
@@ -72,9 +73,11 @@ const PrintCard = () => {
                 </div>
             </div>
             <div className={styles.userCardContent}>
-                {avatarSelected && <img src={avatarSelected?.name} className={styles.avatarImg}></img> }
-                <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
-                <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>
+                {avatarSelected ? <img src={avatarSelected?.name} className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
+                <div>
+                    <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
+                    <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>
+                </div>
             </div>
             <div>    
             </div>

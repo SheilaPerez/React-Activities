@@ -21,7 +21,7 @@ const Heart = () => {
         <div className={styles.heartContent}>
             {heartNum < 20 ? <p className={styles.heartNum}>{heartNum}</p> : heartNum >= 20 && <p className={styles.heartNum}>20</p>}
             <div className={`${heartClicked ? `${styles.heart} ${styles.heartBtnAnimation} ${styles.heartColor}`: styles.heart}`} onClick={handleClickHeartNum}><FcLikePlaceholder size={70}/></div>
-            <button type="button" onClick={handleClickResetHeartNum}>x</button>
+            <button type="button" className={styles.heartBtn} onClick={handleClickResetHeartNum}>x</button>
         </div>
     )
 }

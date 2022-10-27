@@ -87,15 +87,15 @@ const TicTacToe = () => {
     return (
         <div className={styles.content}>
             <p className={styles.title}>---- Tic Tac Toe ----</p>
-            {userWinner && <p>You win!!</p>}
-            {computerWinner && <p>You lose...</p>}
+            {userWinner && <p className={styles.winLose}>You win!!</p>}
+            {computerWinner && <p className={styles.winLose}>You lose... Try again!</p>}
             <div className={styles.boxes}>
                 {boxesNums.map((num) => {
                     const numIncludes = chosenBoxes.includes(num);
                     const numRandomIncludes = random.includes(num);
                     return (
                         <div className={styles.boxContent} onClick={() => handleClickBox(num)}>
-                            {!numIncludes && !numRandomIncludes && <GoPrimitiveDot size={40} color={'#B1AFFF'} />}
+                            {!numIncludes && !numRandomIncludes && <GoPrimitiveDot size={40} color={'#937DC2'} />}
                             {numIncludes ? <ImCross size={40}/> :
                                 random.map((randomNum) => {
                                     return randomNum === num && <TbLetterO size={40}/>;
@@ -105,7 +105,7 @@ const TicTacToe = () => {
                     )
                 })}
             </div>
-            <button type="button" onClick={handleClickRestart}>Restart</button>
+            <button type="button" onClick={handleClickRestart} className={styles.restart}>Play Again!</button>
         </div>
     )
 };

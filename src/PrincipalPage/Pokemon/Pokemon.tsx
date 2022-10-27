@@ -45,7 +45,7 @@ const Pokemon = () => {
     }, [fetchClicked, pokemon]);
 
     const handleChangeSearchPokemon = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPokemon(e.target.value);
+        setPokemon(e.target.value.toLowerCase());
     }
 
     const handleClickFetch = () => {
@@ -62,19 +62,35 @@ const Pokemon = () => {
     return (
         <div className={styles.content}>
             <p className={styles.title}>---- Api Pokemon ----</p>
-            <input type="text" value={pokemon} onChange={handleChangeSearchPokemon} className={styles.inputName}></input>
-            <button type="button" onClick={handleClickFetch}>Fetch</button>
-            <button type="button" onClick={handleClickRefresh}>Refresh</button>
-            {error}
+            <div className={styles.inputContent}>
+                <input type="text" value={pokemon} onChange={handleChangeSearchPokemon} className={styles.inputName}></input>
+                <button type="button" onClick={handleClickFetch} className={styles.fetch}>Fetch</button>
+                <button type="button" onClick={handleClickRefresh} className={styles.refresh}>Refresh</button>
+            </div>
+            <p className={styles.error}>{error}</p>
             {foundedPokemon.name === pokemon && 
-                <div>
-                    <img src={foundedPokemon.sprites.front_default}></img>
-                    {foundedPokemon.abilities.map((ability) => {
-                        return <p>Ability: {ability.ability.name}</p>
-                    })}
-                    {foundedPokemon.types.map((type) => {
-                        return <p>Type: {type.type.name}</p>
-                    })}
+                <div className={styles.infoContent}>
+                    <img src={foundedPokemon.sprites.front_default} className={styles.image}></img>
+                    <div className={styles.info}>
+                        {foundedPokemon.abilities.map((ability) => {
+                            return (
+                            <div className={styles.informationContent}>
+                                <p className={styles.typeInfo}>Ability:</p>
+                                <p>{ability.ability.name}</p>
+                            </div>
+                            )
+                            
+                        })}
+                        {foundedPokemon.types.map((type) => {
+                            return (
+                                <div className={styles.informationContent}>
+                                    <p className={styles.typeInfo}>Type:</p>
+                                    <p>{type.type.name}</p>
+                                </div>
+                            )
+                            
+                        })}
+                    </div>
                 </div>
             }
        </div>

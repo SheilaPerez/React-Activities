@@ -1,6 +1,6 @@
 .content {
-    border: 1px dashed #B1AFFF; 
-    padding: 30px; 
+    border: 1px dashed #937DC2; 
+    padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
     border-radius: 20px;
@@ -15,7 +15,7 @@
 
 .boxes {
     display: flex;
-    width: 300px;
+    width: 310px;
     flex-wrap: wrap;
 }
 
@@ -26,7 +26,27 @@
     margin: 10px;
     cursor: pointer;
     border-radius: 20px;
+    border: 1px solid #937DC2;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.restart {
+    background-color: #937DC2;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+
+}
+
+.winLose {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin: 10px;
+
 }
