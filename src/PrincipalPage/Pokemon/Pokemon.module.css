@@ -87,3 +87,25 @@
 .info {
     font-weight: bold;
 }
+
+@media only screen and (max-width: 780px) {
+    .infoContent {
+        flex-direction: column;
+    }
+    .content {
+        width: 251px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputContent {
+        flex-direction: column;
+    }
+    .fetch {
+        margin: 10px 0;
+    }
+    .refresh {
+        margin: 0;
+    }
+}

@@ -100,3 +100,15 @@ input::placeholder {
     justify-content: space-between;
     margin-right: 40px;
 }
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 251px;
+    }
+    .task {
+        width: 100px;
+    }
+    .taskName {
+        margin-right: 0px;
+    }
+}

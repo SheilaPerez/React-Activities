@@ -12,21 +12,48 @@ import TicTacToe from './PrincipalPage/TicTacToe';
 import Pokemon from './PrincipalPage/Pokemon';
 import AdivinarNum from './PrincipalPage/AdivinarNum';
 import { FcHighPriority } from "react-icons/fc";
+import PrincipalPage from './PrincipalPage';
+import { useState } from 'react';
 function App() {
+  const [numOpen, setNumOpen] = useState<number>(0);
+
+  const openExercice = (num: number) => {
+    setNumOpen(num);
+  }
+
+  const getExerciceComponent = () => {
+    switch (numOpen) {
+      case 1:
+        return <Marcador></Marcador>;
+      case 2:
+        return <Pokemon></Pokemon>;
+      case 3:
+        return <ToDoList></ToDoList>;
+      case 4:
+        return <IteracionObjetos></IteracionObjetos>;
+      case 5:
+        return <RickAndMorty></RickAndMorty>;
+      case 6:
+        return <Buscador></Buscador>;
+      case 7:
+        return <CheckList></CheckList>;
+      case 8:
+        return <PrintCard></PrintCard>;
+      case 9:
+        return <AdivinarNum></AdivinarNum>;
+      case 10:
+        return <FootballMatch></FootballMatch>;
+      case 11:
+        return <TicTacToe></TicTacToe>;
+    }
+  }
+
   return (
     <div className="App">
       <h2>---- Still in progress <FcHighPriority size={20} /> ----</h2>
-      <AdivinarNum></AdivinarNum>
-      <Pokemon></Pokemon>
-      <TicTacToe></TicTacToe>
-      <Marcador></Marcador>
-      <PrintCard></PrintCard>
-      <RickAndMorty></RickAndMorty>
-      <CheckList></CheckList>
-      <Buscador></Buscador>
-      <ToDoList></ToDoList>
-      <IteracionObjetos></IteracionObjetos>
-      <FootballMatch></FootballMatch>
+      <PrincipalPage handleClickOpenExercice={(exerciceNum) => openExercice(exerciceNum)}>
+        {getExerciceComponent()};
+      </PrincipalPage>
       <FizzBuzz></FizzBuzz>
     </div>
   );

@@ -72,7 +72,7 @@ const ToDoList = () => {
                             </div>
                             :
                             <div className={styles.taskName}>
-                                <p>{task.name}</p>
+                                <p className={styles.task}>{task.name}</p>
                                 <div>
                                     <button type="button" className={styles.remove} onClick={() => handleClickRemoveTask(task.id)}>X</button>
                                     <button type="button" className={styles.edited} onClick={() => handleClickEditedBtn(task.id)}>Edited</button>

@@ -95,7 +95,7 @@ const TicTacToe = () => {
                     const numRandomIncludes = random.includes(num);
                     return (
                         <div className={styles.boxContent} onClick={() => handleClickBox(num)}>
-                            {!numIncludes && !numRandomIncludes && <GoPrimitiveDot size={40} color={'#937DC2'} />}
+                            {!numIncludes && !numRandomIncludes && <GoPrimitiveDot size={40} color={'#a8db65'} />}
                             {numIncludes ? <ImCross size={40}/> :
                                 random.map((randomNum) => {
                                     return randomNum === num && <TbLetterO size={40}/>;

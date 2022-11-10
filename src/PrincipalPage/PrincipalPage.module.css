@@ -1,0 +1,156 @@
+.title {
+    color: white;
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 40px;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Boogaloo', 'cursive';
+}
+
+.buttonsExercicies {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button {
+    padding: 15px 22px;
+    border-radius: 15px;
+    background-color: rgba(110 104 104 / 31%);;
+    font-weight: bold;
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.button1 {
+    color: #ff9393;
+    border: 1px solid #ff9393;
+}
+.button1:hover {
+    background-color: #ff9393;
+    color: white;
+}
+
+.button2 {
+    color: #FFAE6D;
+    border: 1px solid #FFAE6D;
+}
+.button2:hover {
+    background-color: #FFAE6D;
+    color: white;
+}
+
+.button3 {
+    color: rgb(100, 211, 100);
+    border: 1px solid rgb(100, 211, 100);
+}
+.button3:hover {
+    background-color: rgb(100, 211, 100);
+    color: white;
+}
+
+.button4 {
+    color: #fd6666;
+    border: 1px solid #fd6666;
+}
+.button4:hover {
+    background-color: #fd6666;
+    color: white;
+}
+
+.button5 {
+    color: #FFCD38;
+    border: 1px solid #FFCD38;
+}
+.button5:hover {
+    background-color: #FFCD38;
+    color: white;
+}
+
+.button6 {
+    color: rgb(231, 56, 56);
+    border: 1px solid rgb(231, 56, 56);
+}
+.button6:hover {
+    background-color: rgb(231, 56, 56);
+    color: white;
+}
+
+.button7 {
+    color: #B1AFFF;
+    border: 1px solid #B1AFFF;
+}
+.button7:hover {
+    background-color: #B1AFFF;
+    color: white;
+}
+
+.button8 {
+    color: #00aab3b8;
+    border: 1px solid #00aab3b8;
+}
+.button8:hover {
+    background-color: #00aab3b8;
+    color: white;
+}
+
+.button9 {
+    color: #9E7676;
+    border: 1px solid #9E7676;
+}
+.button9:hover {
+    background-color: #9E7676;
+    color: white;
+}
+
+.button10 {
+    color: #F675A8;
+    border: 1px solid #F675A8;
+}
+.button10:hover {
+    background-color: #F675A8;
+    color: white;
+}
+
+.button11 {
+    color: #a8db65;
+    border: 1px solid #a8db65;
+}
+.button11:hover {
+    background-color: #a8db65;
+    color: white;
+}
+
+.exerciceOpenedContent {
+    display: flex;
+}
+
+.exerciceContent {
+    margin-left: 60px;
+}
+
+@media only screen and (max-width: 780px) {
+    .buttonsExercicies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 30px 0;
+    }
+
+    .exerciceOpenedContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 59px;
+        display: flex;
+        justify-content: center;
+    }
+}

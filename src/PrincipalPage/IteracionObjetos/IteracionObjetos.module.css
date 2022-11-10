@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed #f28888; 
+    border: 1px dashed #fd6666; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -14,7 +14,7 @@
 }
 
 .animalCard {
-    border: 5px solid #f28888;
+    border: 5px solid #fd6666;
     padding: 15px;
     width: 200px;
     text-align: center;
@@ -27,8 +27,26 @@
 }
 
 .objExemple {
-    color: #f28888;
+    color: #fd6666;
     font-weight: bold;
     font-family: 'Noto Serif Telugu', serif;
     margin-top: 0;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 251px;
+        padding: 24px 38px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .contentPage {
+        flex-direction: column;
+        align-items: center;
+    }
+    .animalCard {
+        margin-left: 0;
+    }
+
 }
