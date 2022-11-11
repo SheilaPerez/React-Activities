@@ -77,8 +77,8 @@ const AdivinarNum = () => {
                         </div>                  
                     </div>
                 }
-                {playClicked && parseInt(userNumber) > randomNum && <p className={styles.info}>Less</p>}
-                {playClicked && parseInt(userNumber) < randomNum && <p className={styles.info}>Higher</p>}
+                {playClicked && parseInt(userNumber) > randomNum && <p className={styles.numinfo}>Less</p>}
+                {playClicked && parseInt(userNumber) < randomNum && <p className={styles.numinfo}>Higher</p>}
             </div>
         </div>
     )

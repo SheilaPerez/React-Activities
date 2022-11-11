@@ -30,12 +30,18 @@ const PrintCard = () => {
     const [formSubmit, setFormSubmit] = useState({ nickName: '', biography: '' });
     const [submitClicked, setSubmitClicked] = useState<Boolean>(false);
     const [avatarSelected, setAvatarSelected] = useState<Avatar>({name: '', id: 0});
+    const [max140Chart, setMax140Chart] = useState<Boolean>(false);
 
     const handleChangeNickName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormState({...formState, nickName: e.target.value});
     }
     const handleChangeBiography = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setFormState({...formState, biography: e.target.value});
+        setFormState({ ...formState, biography: e.target.value });
+        if (e.target.value.length > 140) {
+            setMax140Chart(true);
+        } else {
+            setMax140Chart(false);
+        }
     }
     const handleClickSubmited = () => {
         setFormSubmit({...formSubmit, nickName: formState.nickName, biography: formState.biography})
@@ -59,8 +65,9 @@ const PrintCard = () => {
                 <input className={styles.inputNick} type="text" placeholder="NickName" value={formState.nickName} onChange={(e) => handleChangeNickName(e)}></input>
                 <label className={styles.label}>Biography</label>
                 <textarea className={styles.inputBio}value={formState.biography}onChange={(e) => handleChangeBiography(e)}placeholder="Tell us more about yourself in less than 140 characters"></textarea>
-                <div>
-                    <p>Choose your mood: </p>
+                {max140Chart && <p className={styles.stop}>stop and write less</p>}
+                <p>Choose your mood: </p>
+                <div className={styles.avatarContent}>
                     {avatars.map((avatar) => {
                         return (
                             <img src={avatar.name} className={styles.avatar} onClick={() => handleClickAvatar(avatar)}></img>
@@ -72,13 +79,19 @@ const PrintCard = () => {
                     <button type="button" onClick={handleClickReset} className={styles.reset}>Reset</button>
                 </div>
             </div>
-            <div className={styles.userCardContent}>
-                {avatarSelected ? <img src={avatarSelected?.name} className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
-                <div>
-                    <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
-                    <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>
-                </div>
-            </div>
+                {max140Chart ?
+                    <div className={styles.userCardContentEmpty}>
+                        <h3 className={styles.nickName}>"Unnamed"</h3>
+                        <p className={styles.biographyEmpty}>"No biography provided"</p>
+                    </div> : 
+                    <div className={styles.userCardContent}>
+                    {avatarSelected ? <img src={avatarSelected?.name} className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
+                    <div>
+                        <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
+                        <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>
+                    </div>
+                    </div>
+                }
             <div>    
             </div>
         </div> 

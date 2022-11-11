@@ -94,3 +94,27 @@ input::placeholder {
     color: #B73E3E;
     font-weight: bold;
 }
+
+.numinfo {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 16px;
+} 
+
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .inputNumber {
+        margin: 10px 0px;
+    }
+    .play {
+        margin-left: 0px;
+    }
+    .numinfo {
+        font-size: 16px;
+    }
+}

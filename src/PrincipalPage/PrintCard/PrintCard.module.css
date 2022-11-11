@@ -33,6 +33,7 @@
     color: white;
     font-family: 'Noto Serif Telugu', serif;
     font-size: 12px;
+    width: 284px
 }
 
 .userCardContent {
@@ -42,7 +43,22 @@
     margin-top: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+.userCardContentEmpty {
+    background-color: rgba(59, 57, 57, 0.952);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biographyEmpty {
+    color: white;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 12px;
 }
 
 .inputNick {
@@ -134,4 +150,38 @@ input, select, textarea {
     width: 90px;
     border-radius: 50px;
     margin-right: 23px;
+}
+
+.stop {
+    color: #db6c6c;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .inputBio {
+        width: 191px;
+        height: 200px;
+    }
+    .avatarContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .avatar {
+        width: 70px;
+    }
+    .avatarImg {
+        width:70px;
+    }
+    .nickName {
+        font-size: 30px;
+    }
 }

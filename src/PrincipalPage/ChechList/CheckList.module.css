@@ -84,3 +84,16 @@ input::placeholder {
     color: rgb(100, 211, 100);
     font-weight: bold;
 }
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+        padding: 30px;
+    }
+    .taskContent {
+        justify-content: center;
+    }
+    .taskItem {
+        width: 159px;
+    }
+}

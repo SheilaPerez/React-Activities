@@ -62,3 +62,12 @@ input::placeholder {
     background-color: rgb(0, 0, 0);
     color: rgb(177, 49, 49);
 }
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 251px;
+    }
+    .inputSearch {
+        margin: 10px 0;
+    }
+}
