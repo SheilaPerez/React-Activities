@@ -6,7 +6,12 @@ interface Props {
 }
 const PrincipalPage: FC<Props> = ({ children, handleClickOpenExercice }) => {
     let exercicesNums = [1,2,3,4,5,6,7,8,9,10,11];
+    const [selected, setSelected] = useState(0);
 
+    const openExercice = (num: number) => {
+        handleClickOpenExercice(num);
+        setSelected(num);
+    }
     return (
         <div>
             <h1 className={styles.title}>Hey there! That is my practice exercicies. </h1>
@@ -15,7 +20,7 @@ const PrincipalPage: FC<Props> = ({ children, handleClickOpenExercice }) => {
                 <div className={styles.buttonsExercicies}>
                     {exercicesNums.map((num) => {
                         return (
-                            <button type="button" onClick={() => handleClickOpenExercice(num)} className={`${styles.button} ${styles['button' + num]}`}>{num}</button> 
+                            <button type="button" onClick={() => openExercice(num)} className={`${styles.button} ${styles['button' + num]} ${selected === num && styles.selectedBtn}`}>{num}</button> 
                         )
                     })}
                     </div>
