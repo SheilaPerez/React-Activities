@@ -15,7 +15,7 @@ import { FcHighPriority } from "react-icons/fc";
 import PrincipalPage from './PrincipalPage';
 import { useState } from 'react';
 function App() {
-  const [numOpen, setNumOpen] = useState<number>(0);
+  const [numOpen, setNumOpen] = useState<number>(1);
 
   const openExercice = (num: number) => {
     setNumOpen(num);

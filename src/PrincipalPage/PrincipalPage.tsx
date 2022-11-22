@@ -6,7 +6,7 @@ interface Props {
 }
 const PrincipalPage: FC<Props> = ({ children, handleClickOpenExercice }) => {
     let exercicesNums = [1,2,3,4,5,6,7,8,9,10,11];
-    const [selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState(1);
 
     const openExercice = (num: number) => {
         handleClickOpenExercice(num);
