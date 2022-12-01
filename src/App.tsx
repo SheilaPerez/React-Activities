@@ -11,6 +11,7 @@ import Marcador from './PrincipalPage/Marcador';
 import TicTacToe from './PrincipalPage/TicTacToe';
 import Pokemon from './PrincipalPage/Pokemon';
 import AdivinarNum from './PrincipalPage/AdivinarNum';
+import ChangeSizeColor from './PrincipalPage/ChangeSizeColor';
 import { FcHighPriority } from "react-icons/fc";
 import PrincipalPage from './PrincipalPage';
 import { useState } from 'react';
@@ -45,6 +46,8 @@ function App() {
         return <FootballMatch></FootballMatch>;
       case 11:
         return <TicTacToe></TicTacToe>;
+      case 12: 
+        return <ChangeSizeColor></ChangeSizeColor>
     }
   }
 

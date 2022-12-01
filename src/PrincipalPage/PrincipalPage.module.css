@@ -171,6 +171,18 @@
     color: white;
 }
 
+.button12 {
+    color: #3539ae;
+    border: 1px solid #3539ae;
+}
+.button12:hover {
+    background-color: #3539ae;
+    color: white;
+}
+.button12.selectedBtn {
+    background-color: #3539ae;
+    color: white;
+}
 .exerciceOpenedContent {
     display: flex;
 }

@@ -1,0 +1,39 @@
+.triangle {
+    width: 0;
+    height: 0;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.circle {
+    border-radius: 100px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.square {
+    margin-top: 20px;
+}
+
+.label {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.inputName {
+    padding: 6px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: 'Noto Serif Telugu', serif;
+    border: none;
+}
+
+.inputName:focus {
+    outline: none;
+    border: 1px dashed white;
+}
