@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed rgb(100, 211, 100); 
+    border: 1px dashed rgb(255, 132, 249);
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -34,7 +34,7 @@ input::placeholder {
 }
 
 .addButton {
-    background-color: rgb(100, 211, 100);
+    background-color: rgb(255, 132, 249);
     padding: 6px;
     border-radius: 10px;
     border: none;
@@ -59,7 +59,7 @@ input::placeholder {
 }
 
 .edited {
-    background-color: rgba(88, 161, 88, 0.782);
+    background-color: rgb(255, 132, 249);
     padding: 6px;
     border-radius: 10px;
     border: none;
@@ -99,6 +99,10 @@ input::placeholder {
     align-items: center;
     justify-content: space-between;
     margin-right: 40px;
+}
+
+.flex {
+    display: flex;
 }
 
 @media only screen and (max-width: 780px) {

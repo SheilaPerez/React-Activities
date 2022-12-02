@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed rgb(231, 56, 56); 
+    border: 1px dashed #a8db65; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -38,7 +38,7 @@ input::placeholder {
 }
 
 .search {
-    background-color: rgb(231, 56, 56);
+    background-color: #a8db65; 
     padding: 6px;
     border-radius: 10px;
     border: none;
@@ -60,7 +60,7 @@ input::placeholder {
 
 .reset:hover {
     background-color: rgb(0, 0, 0);
-    color: rgb(177, 49, 49);
+    color: #a8db65; 
 }
 
 @media only screen and (max-width: 780px) {

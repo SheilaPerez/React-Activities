@@ -1,66 +1,47 @@
 import './App.css';
-import FizzBuzz from './PrincipalPage/FizzBuzz';
-import ToDoList from './PrincipalPage/ToDoList';
-import FootballMatch from './PrincipalPage/Reducer/FootballMatch';
-import IteracionObjetos from './PrincipalPage/IteracionObjetos';
-import Buscador from './PrincipalPage/Buscador';
-import CheckList from './PrincipalPage/ChechList';
-import RickAndMorty from './PrincipalPage/RickAndMorty';
-import PrintCard from './PrincipalPage/PrintCard';
-import Marcador from './PrincipalPage/Marcador';
-import TicTacToe from './PrincipalPage/TicTacToe';
-import Pokemon from './PrincipalPage/Pokemon';
-import AdivinarNum from './PrincipalPage/AdivinarNum';
-import ChangeSizeColor from './PrincipalPage/ChangeSizeColor';
 import { FcHighPriority } from "react-icons/fc";
 import PrincipalPage from './PrincipalPage';
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Menu from './PrincipalPage/Menu/Menu';
+import ExercicesMenu from './PrincipalPage/ExercicesMenu/ExercicesMenu';
+import FizzBuzz from './PrincipalPage/ReactBasics/FizzBuzz';
+import TicTacToe from './PrincipalPage/Games/TicTacToe';
+import ReactBasics from './PrincipalPage/ReactBasics/ReactBasics';
+import Lists from './PrincipalPage/Lists';
+import ReactHooks from './PrincipalPage/ReactHooks/ReactHooks';
+import ApiPractice from './PrincipalPage/ApiPractice/ApiPractice';
+import Games from './PrincipalPage/Games/Games';
+
 function App() {
-  const [numOpen, setNumOpen] = useState<number>(1);
-
-  const openExercice = (num: number) => {
-    setNumOpen(num);
-  }
-
-  const getExerciceComponent = () => {
-    switch (numOpen) {
-      case 1:
-        return <Marcador></Marcador>;
-      case 2:
-        return <Pokemon></Pokemon>;
-      case 3:
-        return <ToDoList></ToDoList>;
-      case 4:
-        return <IteracionObjetos></IteracionObjetos>;
-      case 5:
-        return <RickAndMorty></RickAndMorty>;
-      case 6:
-        return <Buscador></Buscador>;
-      case 7:
-        return <CheckList></CheckList>;
-      case 8:
-        return <PrintCard></PrintCard>;
-      case 9:
-        return <AdivinarNum></AdivinarNum>;
-      case 10:
-        return <FootballMatch></FootballMatch>;
-      case 11:
-        return <TicTacToe></TicTacToe>;
-      case 12: 
-        return <ChangeSizeColor></ChangeSizeColor>
-    }
-  }
-
   return (
     <div className="App">
       <h2>---- Still in progress <FcHighPriority size={20} /> ----</h2>
-      <PrincipalPage handleClickOpenExercice={(exerciceNum) => openExercice(exerciceNum)}>
-        {getExerciceComponent()};
-      </PrincipalPage>
-      <FizzBuzz></FizzBuzz>
+      <h1 className="title">Hey there! That is my practice exercicies. </h1>
+      <p className="subtitle">Made with ReactJS + typescript + CSS3</p>
+      <Router>
+        <div className="flex">
+          <Menu></Menu>
+          <Routes>
+            <Route path="/" element={<ExercicesMenu></ExercicesMenu>}></Route>
+            <Route path="/reactbasics/*" element={<ReactBasics></ReactBasics>}></Route>
+            <Route path="/todolists/*" element={<Lists></Lists>}></Route>
+            <Route path="/reacthooks/*" element={<ReactHooks></ReactHooks>}></Route>
+            <Route path="/api/*" element={<ApiPractice></ApiPractice>}></Route>
+            <Route path="/games/*" element={<Games></Games>}></Route>
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
 
 export default App;
  
+
+/** 
+      <PrincipalPage handleClickOpenExercice={(exerciceNum) => openExercice(exerciceNum)}>
+        {getExerciceComponent()};
+      </PrincipalPage>
+      <FizzBuzz></FizzBuzz>
+ **/

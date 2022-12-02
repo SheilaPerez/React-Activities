@@ -70,7 +70,7 @@ const PrintCard = () => {
                 <div className={styles.avatarContent}>
                     {avatars.map((avatar) => {
                         return (
-                            <img src={avatar.name} className={styles.avatar} onClick={() => handleClickAvatar(avatar)}></img>
+                            <img src={`/${avatar.name}`} alt="img" className={styles.avatar} onClick={() => handleClickAvatar(avatar)}></img>
                         )
                     })}
                 </div>
@@ -85,7 +85,7 @@ const PrintCard = () => {
                         <p className={styles.biographyEmpty}>"No biography provided"</p>
                     </div> : 
                     <div className={styles.userCardContent}>
-                    {avatarSelected ? <img src={avatarSelected?.name} className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
+                    {avatarSelected ? <img src={`/${avatarSelected.name}?`}  alt="img" className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
                     <div>
                         <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
                         <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>

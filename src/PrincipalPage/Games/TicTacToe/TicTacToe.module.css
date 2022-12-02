@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed #a8db65; 
+    border: 1px dashed #A0E4CB; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -26,14 +26,14 @@
     margin: 10px;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid #a8db65;
+    border: 1px solid #A0E4CB;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .restart {
-    background-color: #a8db65;
+    background-color: #A0E4CB;
     padding: 6px;
     border-radius: 10px;
     border: none;

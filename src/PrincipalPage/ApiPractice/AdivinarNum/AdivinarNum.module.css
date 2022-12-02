@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed #9E7676; 
+    border: 1px dashed #A5F1E9; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -48,7 +48,7 @@ input::placeholder {
 }
 
 .play {
-    background-color: #9E7676;
+    background-color: #A5F1E9;
     padding: 8px;
     border-radius: 10px;
     border: none;
@@ -59,11 +59,11 @@ input::placeholder {
 }
 
 .play:hover {
-    background-color: #d79797;
+    background-color: #3abcaf;
 }
 
 .playAgain {
-    background-color: #9E7676;
+    background-color: #A5F1E9;
     padding: 8px;
     border-radius: 10px;
     border: none;
@@ -71,12 +71,11 @@ input::placeholder {
     font-weight: bold;
     cursor: pointer;
     margin-left: 10px;
-    color: white;
 }
 
 .playAgain:hover {
     background-color: white;
-    color: #9E7676;
+    color: #A5F1E9;
 }
 
 .name {

@@ -14,20 +14,19 @@ const PrincipalPage: FC<Props> = ({ children, handleClickOpenExercice }) => {
     }
     return (
         <div>
-            <h1 className={styles.title}>Hey there! That is my practice exercicies. </h1>
-            <p className={styles.subtitle}>Made with ReactJS + typescript + CSS3</p>
-            <div className={styles.exerciceOpenedContent}>
-                <div className={styles.buttonsExercicies}>
-                    {exercicesNums.map((num) => {
-                        return (
-                            <button type="button" onClick={() => openExercice(num)} className={`${styles.button} ${styles['button' + num]} ${selected === num && styles.selectedBtn}`}>{num}</button> 
-                        )
-                    })}
+            
+                <div className={styles.exerciceOpenedContent}>
+                    <div className={styles.buttonsExercicies}>
+                        {exercicesNums.map((num) => {
+                            return (
+                                <button type="button" onClick={() => openExercice(num)} className={`${styles.button} ${styles['button' + num]} ${selected === num && styles.selectedBtn}`}>{num}</button> 
+                            )
+                        })}
+                        </div>
+                    <div className={styles.exerciceContent}>
+                        {children}
                     </div>
-                <div className={styles.exerciceContent}>
-                    {children}
                 </div>
-            </div>
         </div>
     )
 };

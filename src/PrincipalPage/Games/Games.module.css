@@ -1,0 +1,32 @@
+.buttonsExercicies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.button {
+    padding: 15px 22px;
+    border-radius: 15px;
+    background-color: rgba(110 104 104 / 31%);;
+    font-weight: bold;
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.button1 {
+    color: #A0E4CB;
+    border: 1px solid #A0E4CB;
+}
+.button1:hover {
+    background-color: #A0E4CB;
+    color: white;
+}
+.button1.selectedBtn {
+    background-color: #A0E4CB;
+    color: white;
+}

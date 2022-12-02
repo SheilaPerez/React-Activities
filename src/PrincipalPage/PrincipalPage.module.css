@@ -1,13 +1,4 @@
-.title {
-    color: white;
-    font-family: 'Boogaloo', 'cursive';
-    font-size: 40px;
-}
 
-.subtitle {
-    color: white;
-    font-family: 'Boogaloo', 'cursive';
-}
 
 .buttonsExercicies {
     display: flex;

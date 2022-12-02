@@ -2,4 +2,18 @@
   margin: 30px;
 }
 
+.title {
+  color: white;
+  font-family: 'Boogaloo', 'cursive';
+  font-size: 40px;
+}
 
+.subtitle {
+  color: white;
+  font-family: 'Boogaloo', 'cursive';
+  margin-bottom: 50px;
+}
+
+.flex {
+  display: flex;
+}

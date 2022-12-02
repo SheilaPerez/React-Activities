@@ -66,7 +66,7 @@ const ToDoList = () => {
                 return (
                     <div>
                         {clickedEditTask && task.id === taskId ?
-                            <div>
+                            <div className={styles.flex}>
                                 <input type="text" value={taskEdited} className={styles.input} onChange={(e) => handleChangeEditTask(e)}></input>
                                 <button type="button" className={styles.save} onClick={() => handleClickSaveEditTask(taskEdited, task)}>Save</button>
                             </div>
