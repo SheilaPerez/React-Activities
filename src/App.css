@@ -8,12 +8,32 @@
   font-size: 40px;
 }
 
+.lightTitle {
+  color: rgb(15, 14, 14);
+  font-family: 'Boogaloo', 'cursive';
+  font-size: 40px;
+}
+
 .subtitle {
   color: white;
   font-family: 'Boogaloo', 'cursive';
   margin-bottom: 50px;
 }
 
+.lightSubtitle {
+  color: rgb(15, 14, 14);
+  font-family: 'Boogaloo', 'cursive';
+  margin-bottom: 50px;
+}
+
 .flex {
   display: flex;
+}
+
+.lightProgress {
+  color: rgb(156, 144, 144);
+}
+
+.progress {
+  color: rgb(15, 14, 14);
 }

@@ -1,0 +1,58 @@
+.buttonsExercicies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.button {
+    padding: 15px 22px;
+    border-radius: 15px;
+    background-color: rgb(255 252 252 / 31%);
+    font-weight: bold;
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.button1 {
+    color: #9E7676;
+    border: 1px solid #9E7676;
+}
+.button1:hover {
+    background-color: #9E7676;
+    color: white;
+}
+.button1.selectedBtn {
+    background-color: #9E7676;
+    color: white;
+}
+
+.button2 {
+    color: #A5F1E9;
+    border: 1px solid #A5F1E9;
+}
+.button2:hover {
+    background-color: #A5F1E9;
+    color: white;
+}
+.button2.selectedBtn {
+    background-color: #A5F1E9;
+    color: white;
+}
+
+.button3 {
+    color: #FFAE6D;
+    border: 1px solid #FFAE6D;
+}
+.button3:hover {
+    background-color: #FFAE6D;
+    color: white;
+}
+.button3.selectedBtn {
+    background-color: #FFAE6D;
+    color: white;
+}

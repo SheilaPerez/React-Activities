@@ -1,0 +1,144 @@
+.content {
+    border: 1px dashed #A5F1E9; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+.lightContent {
+    color:rgba(94, 91, 91, 0.659);
+    border: 1px dashed #A5F1E9; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.inputNumber {
+    padding: 6px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-right: 10px;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 12px;
+    border: none;
+}
+.inputNumber:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+input::placeholder {
+    color: white;  
+}
+
+.notImageContent {
+    width: 150px;
+    height: 150px;
+    border: 1px dotted white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightNotImage {
+    width: 150px;
+    height: 150px;
+    border: 1px dotted rgba(94, 91, 91, 0.659);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.play {
+    background-color: #A5F1E9;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.play:hover {
+    background-color: #3abcaf;
+}
+
+.playAgain {
+    background-color: #A5F1E9;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.playAgain:hover {
+    background-color: white;
+    color: #A5F1E9;
+}
+
+.name {
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+    margin: 0;
+}
+
+.info {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 13px;
+}
+
+.lose {
+    color: #B73E3E;
+    font-weight: bold;
+}
+
+.numinfo {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 16px;
+} 
+
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .inputNumber {
+        margin: 10px 0px;
+    }
+    .play {
+        margin-left: 0px;
+    }
+    .numinfo {
+        font-size: 16px;
+    }
+}

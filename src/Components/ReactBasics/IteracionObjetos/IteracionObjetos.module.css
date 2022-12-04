@@ -1,0 +1,68 @@
+.content {
+    border: 1px dashed #fd6666; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.lightContent {
+    color:rgba(94, 91, 91, 0.659);
+    border: 1px dashed #fd6666; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.animalCard {
+    border: 5px solid #fd6666;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    margin-left: 30px;
+    height: 290px;
+}
+
+.contentPage {
+    display: flex;
+}
+
+.objExemple {
+    color: #fd6666;
+    font-weight: bold;
+    font-family: 'Noto Serif Telugu', serif;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+        padding: 24px 38px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .contentPage {
+        flex-direction: column;
+        align-items: center;
+    }
+    .animalCard {
+        margin-left: 0;
+    }
+
+}

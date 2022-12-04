@@ -1,0 +1,123 @@
+.content {
+    border: 1px dashed #FFCD38;; 
+    padding: 20px 20px 20px 60px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+    margin-bottom: 20px;
+}
+
+.lightContent {
+    color:rgba(94, 91, 91, 0.659);
+    border: 1px dashed #FFCD38; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.newPlayer {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: 'Noto Serif Telugu', serif;
+    border: none;
+}
+
+.newPlayer:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+input::placeholder {
+    color: white;  
+}
+
+.addButton {
+    background-color: #FFCD38;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #e4c466;
+}
+
+.removePlayer {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: 'Noto Serif Telugu', serif;
+    border: none;
+}
+
+.removePlayer:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+.removeButton {
+    background-color: #e4c466;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.removeButton:hover {
+    background-color: #FFCD38;
+}
+
+.removeContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.cardPlayer {
+    border-top: 30px solid #e4c466;
+    border-left: 1px solid #FFCD38;
+    border-right: 1px solid #FFCD38;
+    border-bottom: 1px solid #FFCD38;
+    display: inline-block;    padding: 10px 20px;
+    width: 100px;
+    margin: 20px 52px 30px 0;
+}
+
+.explication {
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+} 

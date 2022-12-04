@@ -1,0 +1,42 @@
+.option {
+    font-family: 'Boogaloo', 'cursive';
+    margin-left: 10px;
+}
+
+.optionContent {
+    border: 2px dashed #BA94D1;
+    color: white;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    cursor: pointer;
+    background-color: rgb(15, 14, 14);
+}
+.optionContent:hover {
+    background-color: #BA94D1;
+    border: 2px dashed white;
+    color: #6ECCAF;
+}
+
+.lightOnContent {
+    border: 2px dashed #6ECCAF;
+    background-color: white;
+    color: #6ECCAF;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    cursor: pointer;
+}
+.lightOnContent:hover {
+    border: 2px dashed #BA94D1;
+    color: #BA94D1;
+
+}
+
+

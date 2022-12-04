@@ -1,0 +1,212 @@
+.content {
+    border: 1px dashed #00ABB3;
+    padding: 20px 60px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 431px;
+}
+
+.lightContent {
+    color:rgba(94, 91, 91, 0.659);
+    border: 1px dashed #00ABB3; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Boogaloo', 'cursive'
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.formContent {
+    color: white;
+    border: 1px dashed #00aab3b8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.lightFormContent {
+    color: rgba(94, 91, 91, 0.659);;
+    border: 1px dashed #00aab3b8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.nickName {
+    font-family: 'Boogaloo','cursive'; 
+    font-size: 40px;
+    color: white;
+    margin: 0;
+}
+
+.biography {
+    color: white;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 12px;
+    width: 284px
+}
+
+.userCardContent {
+    background-color: rgba(59, 57, 57, 0.952);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.userCardContentEmpty {
+    background-color: rgba(59, 57, 57, 0.952);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biographyEmpty {
+    color: white;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 12px;
+}
+
+.inputNick {
+    padding: 6px;
+    width: 170px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(59, 57, 57, 0.952); 
+    margin-bottom: 10px;
+}
+
+.inputNick:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+input::placeholder {
+    color: white;  
+}
+
+.inputBio {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(59, 57, 57, 0.952);
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.inputBio:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+textarea::placeholder {
+    color: white;  
+}
+
+input, select, textarea {
+    color: white;
+    font-size: 15px;
+}
+
+.label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.submit {
+    background-color: #09c0ca;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reset {
+    background-color: #00aab3b8;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: #096469 ;
+    color: #09c0ca
+}
+
+.buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 90px;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.avatarImg {
+    width: 90px;
+    border-radius: 50px;
+    margin-right: 23px;
+}
+
+.stop {
+    color: #db6c6c;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .inputBio {
+        width: 191px;
+        height: 200px;
+    }
+    .avatarContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .avatar {
+        width: 70px;
+    }
+    .avatarImg {
+        width:70px;
+    }
+    .nickName {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,46 @@
+.buttonsExercicies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.button {
+    padding: 15px 22px;
+    border-radius: 15px;
+    background-color: rgb(255 252 252 / 31%);
+    font-weight: bold;
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.button1 {
+    color: rgb(255, 132, 249);
+    border: 1px solid rgb(255, 132, 249);
+}
+.button1:hover {
+    background-color: rgb(255, 132, 249);
+    color: white;
+}
+.button1.selectedBtn {
+    background-color: rgb(255, 132, 249);
+    color: white;
+}
+
+
+.button2 {
+    color: #7370c7;
+    border: 1px solid #7370c7;
+}
+.button2:hover {
+    background-color: #7370c7;
+    color: white;
+}
+.button2.selectedBtn {
+    background-color: #7370c7;
+    color: white;
+}
