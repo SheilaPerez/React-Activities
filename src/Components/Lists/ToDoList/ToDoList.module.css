@@ -125,6 +125,9 @@ input::placeholder {
     .content {
         width: 271px;
     }
+    .lightContent {
+        width: 271px;
+    }
     .task {
         width: 100px;
     }

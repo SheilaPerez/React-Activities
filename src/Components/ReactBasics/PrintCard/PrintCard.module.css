@@ -188,6 +188,12 @@ input, select, textarea {
     .content {
         width: 271px;
     }
+    .lightContent {
+        width: 271px;
+    }
+    .lightTitle {
+        font-size: 24px;
+    }
     .title {
         font-size: 24px;
     }

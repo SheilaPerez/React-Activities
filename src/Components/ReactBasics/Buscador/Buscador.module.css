@@ -83,6 +83,9 @@ input::placeholder {
     .content {
         width: 251px;
     }
+    .lightContent {
+        width: 251px;
+    }
     .inputSearch {
         margin: 10px 0;
     }

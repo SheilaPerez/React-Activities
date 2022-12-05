@@ -28,3 +28,18 @@
     font-family: 'Boogaloo', 'cursive';
     font-size: 30px;
 }
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+    .lightContent {
+        width: 271px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .lightTitle {
+        font-size: 24px;
+    }
+} 

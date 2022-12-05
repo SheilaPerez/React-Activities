@@ -54,6 +54,13 @@
         width: 271px;
         padding: 24px 38px;
     }
+    .lightContent {
+        width: 271px;
+        padding: 24px 38px;
+    }
+    .lightTitle {
+        font-size: 24px;
+    }
     .title {
         font-size: 24px;
     }

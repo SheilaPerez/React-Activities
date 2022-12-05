@@ -114,6 +114,10 @@ input::placeholder {
         width: 271px;
         padding: 30px;
     }
+    .lightContent {
+        width: 271px;
+        padding: 30px;
+    }
     .taskContent {
         justify-content: center;
     }

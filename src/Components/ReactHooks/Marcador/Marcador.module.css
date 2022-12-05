@@ -9,10 +9,10 @@
 .lightContent {
     color:rgba(94, 91, 91, 0.659);
     border: 1px dashed #ff9393; 
-    padding: 20px 20px 20px 60px;
+    padding: 20px 60px 20px 60px;
     margin-bottom: 20px;
     border-radius: 20px;
-    width: 470px;
+    width: 431px;
 }
 
 .title {
@@ -97,16 +97,17 @@
 }
 
 @media only screen and (max-width: 780px) {
+    .content {
+        width: 251px;
+    }
+    .lightContent {
+        width: 251px;
+    }
     .marcContent {
         flex-direction: column;
         align-items: center;
     }
-
     .numContent {
         margin-bottom: 20px;
-    }
-
-    .content {
-        width: 251px;
     }
 }
