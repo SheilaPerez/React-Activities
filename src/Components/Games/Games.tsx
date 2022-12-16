@@ -2,9 +2,10 @@ import styles from './Games.module.css';
 import { useState } from "react";
 import { Outlet, Route, Routes, useNavigate } from "react-router-dom";
 import TicTacToe from './TicTacToe';
+import Hangman from './Hangman/Hangman';
 
 const Games = () => {
-    const exercicesNums = [1];
+    const exercicesNums = [1, 2];
     const [selected, setSelected] = useState<number>(1);
     const navigate = useNavigate();
 
@@ -26,6 +27,7 @@ const Games = () => {
             <Routes>
                 <Route path="" element={<TicTacToe></TicTacToe>}></Route>
                 <Route path="1" element={<TicTacToe></TicTacToe>}></Route>
+                <Route path="2" element={<Hangman></Hangman>}></Route>
             </Routes> 
             <Outlet/>
         </div>

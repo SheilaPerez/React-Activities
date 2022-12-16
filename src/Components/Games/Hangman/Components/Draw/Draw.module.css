@@ -1,0 +1,88 @@
+.manDiv {
+    position: relative;
+    height: 200px;
+    left: 30px;
+}
+
+.stick1 {
+    border-left: 6px solid #a0c8e4;
+    height: 26px;
+    position: absolute;
+    left: 100px;
+}
+
+.stick2 {
+    border-top: 6px solid #a0c8e4;
+    width: 100px;
+    position: absolute;
+    top: 0
+}
+
+.stick3 {
+    border-left: 6px solid #a0c8e4;
+    height: 160px;
+    position: absolute;
+    left: 0;
+}
+
+.stick4 {
+    border-bottom: 6px solid #a0c8e4;
+    width: 70px;
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
+}
+
+.head {
+    border: 6px solid #a0c8e4;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 83px;
+    top: 20px;
+}
+
+.body {
+    border-left: 6px solid #a0c8e4;
+    height: 70px;
+    position: absolute;
+    left: 100px;
+    top: 60px;
+}
+
+.arms {
+    border-top: 6px solid #a0c8e4;
+    width: 55px;
+    position: absolute;
+    top: 80px;
+    left: 77px;
+}
+
+.legLeft {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-bottom: 21px solid lightblue;
+    position: absolute;
+    bottom: 48px;
+    left: 84px;
+}
+
+.legRight {
+    width: 0;
+    height: 0;
+    border-right: 14px solid transparent;
+    border-bottom: 21px solid lightblue;
+    position: absolute;
+    bottom: 48px;
+    left: 108px;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}

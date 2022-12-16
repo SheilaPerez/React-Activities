@@ -1,0 +1,30 @@
+.linesWordUnknow {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 19px;
+}
+
+.line {
+    border-bottom: 2px solid black;
+    width: 20px;
+    margin: 0px 5px;
+}
+
+.lightLine {
+    border-bottom: 2px solid white;
+    width: 20px;
+    margin: 0px 5px;
+}
+
+.correctLetter {
+    text-transform: uppercase;
+    font-size: 19px;
+    margin: 0px 5px;
+    width: 20px;
+}
+
+.winMessage {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+}

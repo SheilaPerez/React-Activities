@@ -1,0 +1,68 @@
+.content {
+    border: 1px dashed #A0E4CB; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.lightContent {
+    color:rgba(94, 91, 91, 0.659);
+    border: 1px dashed #A0E4CB; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 20px 0;
+}
+
+.restart {
+        background-color: #A0E4CB;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        width: 90px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 10px;
+}
+
+.restart:hover {
+    background-color: white;
+    color: #A0E4CB;
+}
+
+.lostMessage {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: rgb(236, 104, 104);
+}
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+        padding: 30px;
+    }
+    .lightContent {
+        width: 271px;
+        padding: 30px;
+    }
+}

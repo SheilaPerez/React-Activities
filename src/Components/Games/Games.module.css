@@ -30,3 +30,16 @@
     background-color: #A0E4CB;
     color: white;
 }
+
+.button2 {
+    color: #bbee81;
+    border: 1px solid #bbee81;
+}
+.button2:hover {
+    background-color: #bbee81;
+    color: white;
+}
+.button2.selectedBtn {
+    background-color: #bbee81;
+    color: white;
+}

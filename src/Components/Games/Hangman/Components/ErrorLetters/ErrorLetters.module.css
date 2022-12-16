@@ -1,0 +1,13 @@
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 20px 0;
+    height: 35px;
+}
+
+.userLetter {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgb(236, 104, 104);
+    margin-right: 10px;
+}
