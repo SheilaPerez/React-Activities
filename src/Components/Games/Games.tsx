@@ -3,9 +3,10 @@ import { useState } from "react";
 import { Outlet, Route, Routes, useNavigate } from "react-router-dom";
 import TicTacToe from './TicTacToe';
 import Hangman from './Hangman/Hangman';
+import Memory from './Memory';
 
 const Games = () => {
-    const exercicesNums = [1, 2];
+    const exercicesNums = [1, 2, 3];
     const [selected, setSelected] = useState<number>(1);
     const navigate = useNavigate();
 
@@ -28,6 +29,7 @@ const Games = () => {
                 <Route path="" element={<TicTacToe></TicTacToe>}></Route>
                 <Route path="1" element={<TicTacToe></TicTacToe>}></Route>
                 <Route path="2" element={<Hangman></Hangman>}></Route>
+                <Route path="3" element={<Memory></Memory>}></Route>
             </Routes> 
             <Outlet/>
         </div>

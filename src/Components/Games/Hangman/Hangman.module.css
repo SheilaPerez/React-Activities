@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed #A0E4CB; 
+    border: 1px dashed #CE7777; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -9,7 +9,7 @@
 
 .lightContent {
     color:rgba(94, 91, 91, 0.659);
-    border: 1px dashed #A0E4CB; 
+    border: 1px dashed #CE7777; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -36,19 +36,19 @@
 }
 
 .restart {
-        background-color: #A0E4CB;
-        padding: 8px;
-        border-radius: 10px;
-        border: none;
-        width: 90px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-left: 10px;
+    background-color: #CE7777;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 .restart:hover {
     background-color: white;
-    color: #A0E4CB;
+    color: #CE7777;
 }
 
 .lostMessage {

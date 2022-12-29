@@ -1,0 +1,69 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s linear .1s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    background-color: #8EC3B0;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.animalImage {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background-color: white;
+    padding: 7px;
+}
+
+
+.card .flipfront {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card .flipback{
+    transform: perspective(600px) rotateY(360deg);
+
+}
+
+.restartBtn {
+    background-color: #8EC3B0;
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.restartBtn:hover {
+    background-color: white;
+    color: #8EC3B0;
+}

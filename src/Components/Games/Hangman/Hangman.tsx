@@ -45,7 +45,7 @@ const Hangman = () => {
             <Lines wordToLines={words[random]} letterSelected={userLetters} countMatches={numLettersMatch} setMatchLetters={(match) => setNumLettersMatch(match)}/>
             <LettersButtons userLettersSelected={userLetters} handleClickUSerLetters={userClickLetterButton}></LettersButtons>
             <ErrorLetters userLettersSelected={userLetters} randomWord={words[random]}></ErrorLetters>
-            <button type="button" onClick={handleClickRestart} className={styles.restart}>Restart</button>
+            <button type="button" onClick={handleClickRestart} className={styles.restart}>Play Again!</button>
         </div>
     )
 };

@@ -1,0 +1,30 @@
+.content {
+    border: 1px dashed #8EC3B0; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 789px;
+}
+
+.lightContent {
+    color:white;
+    border: 1px dashed #8EC3B0; 
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 800px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}

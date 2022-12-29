@@ -1,5 +1,5 @@
 .content {
-    border: 1px dashed #A0E4CB; 
+    border: 1px dashed #B8E8FC; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     color: white;
@@ -9,7 +9,7 @@
 
 .lightContent {
     color:rgba(94, 91, 91, 0.659);
-    border: 1px dashed #A0E4CB; 
+    border: 1px dashed #B8E8FC; 
     padding: 20px 20px 20px 60px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -42,14 +42,14 @@
     margin: 10px;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid #A0E4CB;
+    border: 1px solid #B8E8FC;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .restart {
-    background-color: #A0E4CB;
+    background-color: #B8E8FC;
     padding: 6px;
     border-radius: 10px;
     border: none;

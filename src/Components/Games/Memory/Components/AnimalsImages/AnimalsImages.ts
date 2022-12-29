@@ -1,0 +1,111 @@
+const AnimalsImages = [{
+    name: "zorro.png",
+    id: 1,
+    isRotated: false,
+    otherCardId: 10,
+    guessed: false
+}, {
+    name: "elefante.png",
+    id: 2,
+    isRotated: false,
+    otherCardId: 11,
+    guessed: false
+}, {
+    name: "flamenco.png",
+    id: 3,
+    isRotated: false,
+    otherCardId: 12,
+    guessed: false
+}, {
+    name: "mapache.png",
+    id: 4,
+    isRotated: false,
+    otherCardId: 13,
+    guessed: false
+}, {
+    name: "ardilla.png",
+    id: 5,
+    isRotated: false,
+    otherCardId: 14,
+    guessed: false 
+}, {
+    name: "cocodrilo.png",
+    id: 6,
+    isRotated: false,
+    otherCardId: 15,
+    guessed: false
+}, {
+    name: "rinoceronte.png",
+    id: 7,
+    isRotated: false,
+    otherCardId: 16,
+    guessed: false
+}, {
+    name: "conejo.png",
+    id: 8,
+    isRotated: false,
+    otherCardId: 17,
+    guessed: false
+}, {
+    name: "hipopotamo.png",
+    id: 9,
+    isRotated: false,
+    otherCardId: 18,
+    guessed: false
+}, {
+    name: "zorro.png",
+    id: 10,
+    isRotated: false,
+    otherCardId: 1,
+    guessed: false
+}, {
+    name: "elefante.png",
+    id: 11,
+    isRotated: false,
+    otherCardId: 2,
+    guessed: false
+}, {
+    name: "flamenco.png",
+    id: 12,
+    isRotated: false,
+    otherCardId: 3,
+    guessed: false
+}, {
+    name: "mapache.png",
+    id: 13,
+    isRotated: false,
+    otherCardId: 4,
+    guessed: false
+}, {
+    name: "ardilla.png",
+    id: 14,
+    isRotated: false,
+    otherCardId: 5,
+    guessed: false 
+}, {
+    name: "cocodrilo.png",
+    id: 15,
+    isRotated: false,
+    otherCardId: 6,
+    guessed: false
+}, {
+    name: "rinoceronte.png",
+    id: 16,
+    isRotated: false,
+    otherCardId: 7,
+    guessed: false
+}, {
+    name: "conejo.png",
+    id: 17,
+    isRotated: false,
+    otherCardId: 8,
+    guessed: false
+}, {
+    name: "hipopotamo.png",
+    id: 18,
+    isRotated: false,
+    otherCardId: 9,
+    guessed: false
+}]
+
+export default AnimalsImages;

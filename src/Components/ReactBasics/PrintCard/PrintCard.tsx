@@ -22,17 +22,17 @@ const PrintCard = () => {
         id: 4
     }, {
         name: "avatar4.jpeg",
-        id: 4  
+        id: 5  
     }, {
         name: "avatar5.webp",
-        id: 5
+        id: 6
     }]
     const [formState, setFormState] = useState({ nickName: '', biography: '' });
     const [formSubmit, setFormSubmit] = useState({ nickName: '', biography: '' });
     const [submitClicked, setSubmitClicked] = useState<Boolean>(false);
     const [avatarSelected, setAvatarSelected] = useState<Avatar>({name: '', id: 0});
     const [max140Chart, setMax140Chart] = useState<Boolean>(false);
-    const {lightOn, setLightOn} = useContext(ColorContext);
+    const {lightOn} = useContext(ColorContext);
 
     const handleChangeNickName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormState({...formState, nickName: e.target.value});
@@ -87,11 +87,11 @@ const PrintCard = () => {
                         <p className={styles.biographyEmpty}>"No biography provided"</p>
                     </div> : 
                     <div className={styles.userCardContent}>
-                    {avatarSelected ? <img src={`/${avatarSelected.name}?`}  alt="img" className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
-                    <div>
-                        <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
-                        <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>
-                    </div>
+                        {avatarSelected ? <img src={`/${avatarSelected.name}?`}  alt="img" className={styles.avatarImg}></img> : <BsFillPersonFill size={90}/>}
+                        <div>
+                            <h3 className={styles.nickName}>{submitClicked && formSubmit.nickName.length > 0 ? formSubmit.nickName : "Unnamed"}</h3>
+                            <p className={styles.biography}>{submitClicked && formSubmit.biography.length > 0 ? formSubmit.biography : "No biography provided" }</p>
+                        </div>
                     </div>
                 }
             <div>    
