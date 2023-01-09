@@ -1,15 +1,16 @@
+import React, { Suspense } from 'react';
 import './App.css';
 import { FcHighPriority } from "react-icons/fc";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Menu from './Components/Menu/Menu';
-import ExercicesMenu from './Components/ExercicesMenu/ExercicesMenu';
-import ReactBasics from './Components/ReactBasics/ReactBasics';
-import Lists from './Components/Lists';
-import ReactHooks from './Components/ReactHooks/ReactHooks';
-import ApiPractice from './Components/ApiPractice/ApiPractice';
-import Games from './Components/Games/Games';
 import { useState } from 'react';
 import ColorContext from './Context/ColorContext';
+const ExercicesMenu = React.lazy(() => import ('./Components/ExercicesMenu/ExercicesMenu')) ;
+const ReactBasics  = React.lazy(() => import ('./Components/ReactBasics/ReactBasics'));
+const Lists = React.lazy(() => import ('./Components/Lists'));
+const ReactHooks = React.lazy(() => import('./Components/ReactHooks/ReactHooks'));
+const ApiPractice = React.lazy(() => import('./Components/ApiPractice/ApiPractice'));
+const Games = React.lazy(() => import('./Components/Games/Games'));
 
 function App() {
   const [lightOn, setLightOn] = useState(false);
@@ -26,12 +27,12 @@ function App() {
           <div className="flex">
             <Menu></Menu>
             <Routes>
-              <Route path="/" element={<ExercicesMenu></ExercicesMenu>}></Route>
-              <Route path="/reactbasics/*" element={<ReactBasics></ReactBasics>}></Route>
-              <Route path="/todolists/*" element={<Lists></Lists>}></Route>
-              <Route path="/reacthooks/*" element={<ReactHooks></ReactHooks>}></Route>
-              <Route path="/api/*" element={<ApiPractice></ApiPractice>}></Route>
-              <Route path="/games/*" element={<Games></Games>}></Route>
+              <Route path="/" element={<Suspense><ExercicesMenu/></Suspense>}></Route>
+              <Route path="/reactbasics/*" element={<Suspense><ReactBasics/></Suspense>}></Route>
+              <Route path="/todolists/*" element={<Suspense><Lists/></Suspense>}></Route>
+              <Route path="/reacthooks/*" element={<Suspense><ReactHooks/></Suspense>}></Route>
+              <Route path="/api/*" element={<Suspense><ApiPractice/></Suspense>}></Route>
+              <Route path="/games/*" element={<Suspense><Games/></Suspense>}></Route>
             </Routes>
           </div>
         </Router>
