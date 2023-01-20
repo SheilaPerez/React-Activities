@@ -11,6 +11,7 @@ const ExercicesMenu = () => {
             <Options options={"React Hooks"} handleClickOption={() => navigate("/reacthooks")}></Options>
             <Options options={"API practice"} handleClickOption={() => navigate("/api")}></Options>
             <Options options={"Games"} handleClickOption={() => navigate("/games")}></Options>
+            <Options options={"Redux Basics"} handleClickOption={() => navigate("/reduxbasics")}></Options>
         </div>
     )
 };

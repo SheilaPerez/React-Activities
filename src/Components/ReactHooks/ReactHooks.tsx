@@ -26,7 +26,6 @@ const ReactHooks = () => {
                 </div>
             </div>
             <Routes>
-                <Route path="" element={<ChangeSizeColor></ChangeSizeColor>}></Route>
                 <Route path="1" element={<ChangeSizeColor></ChangeSizeColor>}></Route>
                 <Route path="2" element={<Marcador></Marcador>}></Route>
                 <Route path="3" element={<FootballMatch></FootballMatch>}></Route>

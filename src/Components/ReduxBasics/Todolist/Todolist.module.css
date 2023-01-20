@@ -1,0 +1,96 @@
+.content {
+    border: 1px dashed rgb(132, 212, 255);
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.lightContent {
+    color:rgba(94, 91, 91, 0.659);
+    border: 1px dashed rgb(132, 212, 255);
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 470px;
+}
+
+.title {
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.lightTitle {
+    color: rgba(110 104 104 / 31%);
+    font-weight: 'bold';
+    font-family: 'Boogaloo', 'cursive';
+    font-size: 30px;
+}
+
+.input {
+    padding: 6px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgba(94, 91, 91, 0.659); 
+    margin-right: 10px;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 12px;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px dashed white;
+}
+
+input::placeholder {
+    color: white;  
+}
+
+.remove {
+    background-color: rgb(211, 100, 100);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.remove:hover {
+    background-color: rgb(214, 67, 67);
+}
+
+.send {
+    background-color: rgba(100, 211, 100, 0.617);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    width: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.send:hover {
+    background-color: rgb(100, 211, 100);
+}
+
+.taskNameContent {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 780px) {
+    .content {
+        width: 271px;
+    }
+    .lightContent {
+        width: 271px;
+    }
+    .title {
+        font-size: 25px;
+    }
+}
